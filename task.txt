@@ -1,0 +1,71 @@
+1 admin
+2 fakultas
+3 jurusan
+4 mahasiswa
+5 dosen
+
+menu create absen di list jurusan
+
+jadwal - nentuin pagi siang sore ( sesi )
+
+fitur ( dalam checkbox )
+
+akses_fitur ( dac )
+
+generate presensi
+konfigurasi presensi :
+-membuat user jurusan ( management_id = jurusan_id / fakultas_id )
+-check jurusan/fakultas, if user tipe == 3 maka check management_id = id jurusan, if tipe == 2 maka check management_ud = id fakultas
+-bisa tambah dosen/mahasiswa ( dengan jurusan_id )
+-tambah matkul ( dengan jurusan_id )
+
+login jurusan pilihan jurusan
+login dosen pilihan jurusan
+login mahasiswa pilihan jurusan
+
+login fakultas pilihan fakultas
+
+login admin ga ada pilihan
+
+milih db
+
+db_fakultas
+
+
+
+
+if login as jurusan , look at db_jurusan
+
+if login as fakultas , look at db_fakultas
+db_jurusan
+- db_fakultas_id
+menu
+fakultas
+list jurusan
+
+db
+users - username,password,role,management_id - ( jurusan , fakultas )
+db_jurusan - id , jurusan, fakultas_id , db_name
+db_fakultas - id, fakultas , db_name
+feature - id,deskripsi
+akses_fitur - id,fitur_id,user_id ( looping from fitur, if avail in akses fitur check it )
+
+db per jurusan
+mahasiswa
+dosen
+matakuliah - dosen ( ga usah jurusan_id )
+kehadiran - mahasiswa id,jadwal_id, tanggal,matkul_id - bisa generate langsung dari jadwalnya
+jadwal_matakuliah - buat generate otomatis absen jam segitu
+jadwal_sesi
+ambil_matakuliah
+
+learn how dynamically change like country thne city
+
+count total jadwal kuliah , mahassiwa
+
+if management_id==0 , cannot assign dac
+create different fitur for jurusan and fakultas
+
+create mahasiswa,dosen
+dac
+lihat detail jurusan
